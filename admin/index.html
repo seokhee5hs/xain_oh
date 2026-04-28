@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XAIN Lab Admin Dashboard</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <div id="app" class="app">
+    <!-- Login Page -->
+    <div id="loginPage" class="page active">
+      <div class="login-container">
+        <div class="login-box">
+          <h1>XAIN Lab</h1>
+          <p class="subtitle">Admin Dashboard</p>
+          <form id="loginForm">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="admin@xainlab.ac.kr" required>
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" placeholder="••••••••" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">로그인</button>
+          </form>
+          <p class="login-hint">기본 이메일: admin@xainlab.ac.kr</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dashboard Page -->
+    <div id="dashboardPage" class="page">
+      <header class="admin-header">
+        <div class="header-left">
+          <h1>📊 XAIN Lab Admin</h1>
+          <p id="userInfo">Admin User</p>
+        </div>
+        <button id="logoutBtn" class="btn btn-ghost">로그아웃</button>
+      </header>
+
+      <div class="admin-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+          <nav class="sidebar-nav">
+            <button class="nav-item active" data-section="publications">
+              📄 논문 관리
+            </button>
+            <button class="nav-item" data-section="achievements">
+              🏆 성과 관리
+            </button>
+            <button class="nav-item" data-section="projects">
+              🔬 프로젝트 관리
+            </button>
+            <button class="nav-item" data-section="members">
+              👥 팀원 관리
+            </button>
+          </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-content">
+          <!-- Publications Section -->
+          <section id="publications" class="content-section active">
+            <div class="section-header">
+              <h2>📄 논문 관리</h2>
+              <button class="btn btn-primary" id="addPublicationBtn">+ 논문 추가</button>
+            </div>
+            <div id="publicationsList" class="items-grid"></div>
+          </section>
+
+          <!-- Achievements Section -->
+          <section id="achievements" class="content-section">
+            <div class="section-header">
+              <h2>🏆 성과 관리</h2>
+              <button class="btn btn-primary" id="addAchievementBtn">+ 성과 추가</button>
+            </div>
+            <div id="achievementsList" class="items-grid"></div>
+          </section>
+
+          <!-- Projects Section -->
+          <section id="projects" class="content-section">
+            <div class="section-header">
+              <h2>🔬 프로젝트 관리</h2>
+              <button class="btn btn-primary" id="addProjectBtn">+ 프로젝트 추가</button>
+            </div>
+            <div id="projectsList" class="items-grid"></div>
+          </section>
+
+          <!-- Members Section -->
+          <section id="members" class="content-section">
+            <div class="section-header">
+              <h2>👥 팀원 관리</h2>
+              <button class="btn btn-primary" id="addMemberBtn">+ 팀원 추가</button>
+            </div>
+            <div id="membersList" class="items-grid"></div>
+          </section>
+        </main>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for Forms -->
+  <div id="formModal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" id="closeModalBtn">&times;</button>
+      <h2 id="modalTitle">Form</h2>
+      <form id="dynamicForm"></form>
+    </div>
+  </div>
+
+  <!-- Notification Toast -->
+  <div id="notification" class="notification"></div>
+
+  <script src="admin.js"></script>
+</body>
+</html>
