@@ -26,11 +26,13 @@
       <a href="#publications" data-page="publications">Publications</a>
       <a href="#members" data-page="members">Members</a>
       <a href="#contact" data-page="contact">Contact</a>
+      <a href="admin/index.html" class="admin-link" title="관리자 대시보드">⚙️</a>
     </nav>
   </header>
 
   <main>
-    <section id="home" class="page active">
+    <!-- Home Page -->
+    <section id="home" class="page active" data-page-name="home">
       <div class="hero">
         <div class="hero-copy">
           <p class="eyebrow">XR · AI · NPC Interaction Lab</p>
@@ -54,15 +56,16 @@
       </div>
     </section>
 
-    <section id="about" class="page">
+    <!-- About Page -->
+    <section id="about" class="page" data-page-name="about">
       <div class="section-head">
         <p class="eyebrow">About XAIN Lab</p>
         <h2>인간과 지능형 캐릭터가 함께 존재하는 몰입 환경을 연구합니다.</h2>
       </div>
       <div class="two-column">
         <div>
-          <p class="body-large">XAIN Lab은 확장현실, 인공지능, NPC 상호작용을 융합하여 가상공간 속 캐릭터가 단순한 스크립트 오브젝트를 넘어 기억, 감정,[...]
-          <p>연구는 게임, 메타버스, 디지털 휴먼, 교육 시뮬레이션, 인터랙티브 콘텐츠로 확장됩니다. 기술 구현뿐 아니라 사용자가 느끼는 몰입감, [...]
+          <p class="body-large">XAIN Lab은 확장현실, 인공지능, NPC 상호작용을 융합하여 가상공간 속 캐릭터가 단순한 스크립트 오브젝트를 넘어 기억, 감정, 자율성을 가진 지능형 에이전트로 발전하는 방식을 연구합니다.</p>
+          <p>연구는 게임, 메타버스, 디지털 휴먼, 교육 시뮬레이션, 인터랙티브 콘텐츠로 확장됩니다. 기술 구현뿐 아니라 사용자가 느끼는 몰입감, 신뢰감, 감정적 공감을 중심으로 설계합니다.</p>
         </div>
         <div class="principle-grid">
           <article>
@@ -84,7 +87,8 @@
       </div>
     </section>
 
-    <section id="research" class="page">
+    <!-- Research Page -->
+    <section id="research" class="page" data-page-name="research">
       <div class="section-head">
         <p class="eyebrow">Research Areas</p>
         <h2>XR 공간, 생성형 AI, NPC 에이전트, 인터랙티브 서사를 하나의 연구 흐름으로 연결합니다.</h2>
@@ -120,31 +124,17 @@
       </div>
     </section>
 
-    <section id="projects" class="page">
+    <!-- Projects Page -->
+    <section id="projects" class="page" data-page-name="projects">
       <div class="section-head">
         <p class="eyebrow">Projects</p>
         <h2>대표 연구 프로젝트는 AI 캐릭터와 몰입형 콘텐츠 제작을 중심으로 확장됩니다.</h2>
       </div>
-      <div class="project-list">
-        <article>
-          <p class="tag">AI NPC</p>
-          <h3>Living NPC Framework</h3>
-          <p>생성형 AI와 행동 모델을 결합해 장기 기억, 목표, 상황 인식을 가진 NPC 프로토타입을 개발합니다.</p>
-        </article>
-        <article>
-          <p class="tag">XR UX</p>
-          <h3>Immersive Interaction Study</h3>
-          <p>XR 환경에서 사용자와 AI 캐릭터의 거리, 시선, 음성, 제스처가 몰입감에 미치는 영향을 실험합니다.</p>
-        </article>
-        <article>
-          <p class="tag">Narrative</p>
-          <h3>Adaptive Story Agent</h3>
-          <p>사용자 선택과 감정 반응에 따라 캐릭터 대사와 사건 전개가 달라지는 인터랙티브 서사를 설계합니다.</p>
-        </article>
-      </div>
+      <div id="projectsList" class="project-list"></div>
     </section>
 
-    <section id="achievements" class="page">
+    <!-- Achievements Page -->
+    <section id="achievements" class="page" data-page-name="achievements">
       <div class="section-head">
         <p class="eyebrow">Achievements</p>
         <h2>연구 성과 및 프로젝트 수주 현황</h2>
@@ -153,48 +143,12 @@
         <div class="achievements-intro">
           <p>XAIN Lab의 연구 성과는 국내외 학술 활동, 산학 협력, 정부 지원 프로젝트로 구성됩니다.</p>
         </div>
-        <div class="achievements-grid">
-          <article class="achievement-card">
-            <h3>학술 발표</h3>
-            <p>International Conferences</p>
-            <ul>
-              <li>CHI 2024 - Interactive Storytelling in XR</li>
-              <li>SIGGRAPH Asia 2023 - Generative AI NPC</li>
-              <li>IEEE VR 2023 - Spatial Interaction Design</li>
-            </ul>
-          </article>
-          <article class="achievement-card">
-            <h3>정부 과제</h3>
-            <p>Government & Foundation Support</p>
-            <ul>
-              <li>과기정통부 연구개발 과제</li>
-              <li>한국연구재단 기초연구사업</li>
-              <li>지역 혁신 성장 동력 프로젝트</li>
-            </ul>
-          </article>
-          <article class="achievement-card">
-            <h3>산학 협력</h3>
-            <p>Industry Partnership</p>
-            <ul>
-              <li>대형 게임사 XR 프로젝트 수행</li>
-              <li>메타버스 플랫폼 기술 개발</li>
-              <li>디지털 휴먼 애플리케이션 개발</li>
-            </ul>
-          </article>
-          <article class="achievement-card">
-            <h3>수상 및 인정</h3>
-            <p>Awards & Recognition</p>
-            <ul>
-              <li>우수 연구 논문상</li>
-              <li>혁신 기술 개발상</li>
-              <li>산학협력 우수상</li>
-            </ul>
-          </article>
-        </div>
+        <div id="achievementsList" class="achievements-grid"></div>
       </div>
     </section>
 
-    <section id="publications" class="page">
+    <!-- Publications Page -->
+    <section id="publications" class="page" data-page-name="publications">
       <div class="section-head">
         <p class="eyebrow">Publications</p>
         <h2>학술 논문 및 연구 발표</h2>
@@ -203,46 +157,12 @@
         <div class="publications-intro">
           <p>XAIN Lab의 연구 성과를 담은 학술 논문, 저널 논문, 국제 학술대회 발표 현황입니다.</p>
         </div>
-        
-        <div class="publications-section">
-          <h3>2024</h3>
-          <ul class="publication-list">
-            <li>
-              <span class="pub-type">Journal</span>
-              <span class="pub-title">논문 제목을 입력하세요 (2024)</span>
-              <span class="pub-authors">저자명, 저자명</span>
-              <span class="pub-journal">학술지명</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="publications-section">
-          <h3>2023</h3>
-          <ul class="publication-list">
-            <li>
-              <span class="pub-type">Conference</span>
-              <span class="pub-title">논문 제목을 입력하세요 (2023)</span>
-              <span class="pub-authors">저자명, 저자명</span>
-              <span class="pub-journal">학술대회명</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="publications-section">
-          <h3>2022</h3>
-          <ul class="publication-list">
-            <li>
-              <span class="pub-type">Journal</span>
-              <span class="pub-title">논문 제목을 입력하세요 (2022)</span>
-              <span class="pub-authors">저자명, 저자명</span>
-              <span class="pub-journal">학술지명</span>
-            </li>
-          </ul>
-        </div>
+        <div id="publicationsList" class="publications-list"></div>
       </div>
     </section>
 
-    <section id="members" class="page">
+    <!-- Members Page -->
+    <section id="members" class="page" data-page-name="members">
       <div class="section-head">
         <p class="eyebrow">Members</p>
         <h2>기술 구현, 사용자 연구, 콘텐츠 디자인을 함께 다루는 연구팀을 지향합니다.</h2>
@@ -253,24 +173,12 @@
           <p class="placeholder">오석희 교수</p>
           <p>XR, AI NPC, 인터랙티브 콘텐츠, 인간-AI 상호작용 분야의 연구와 산학협력을 이끕니다.</p>
         </div>
-        <div class="member-roles">
-          <article>
-            <h3>Graduate Researchers</h3>
-            <p>AI NPC 모델링, XR 프로토타이핑, 사용자 실험, 논문 작성을 수행합니다.</p>
-          </article>
-          <article>
-            <h3>Undergraduate Researchers</h3>
-            <p>Unity/Unreal 프로토타입, 데이터 수집, 콘텐츠 제작, 데모 개발에 참여합니다.</p>
-          </article>
-          <article>
-            <h3>Collaborators</h3>
-            <p>게임, 메타버스, 교육, 문화콘텐츠 분야의 산학 및 공동연구를 환영합니다.</p>
-          </article>
-        </div>
+        <div id="membersList" class="member-roles"></div>
       </div>
     </section>
 
-    <section id="contact" class="page">
+    <!-- Contact Page -->
+    <section id="contact" class="page" data-page-name="contact">
       <div class="contact-panel">
         <div>
           <p class="eyebrow">Contact</p>
@@ -291,6 +199,7 @@
     <p>Hanshin Univ. XR · AI · NPC Interaction Lab | Connecting humans and agents through intelligence</p>
   </footer>
 
+  <script src="js/api.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

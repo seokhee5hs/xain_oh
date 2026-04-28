@@ -1,0 +1,165 @@
+/* 추가 스타일 - 동적 콘텐츠 관련 */
+
+.admin-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius);
+  font-size: 18px;
+  transition: all 0.2s ease;
+}
+
+.admin-link:hover {
+  background: var(--bg);
+  transform: scale(1.1);
+}
+
+/* Publications List Styles */
+.publications-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.publications-section {
+  margin-bottom: 32px;
+}
+
+.publications-section h3 {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: var(--blue);
+  border-bottom: 2px solid var(--line);
+  padding-bottom: 8px;
+}
+
+.publication-list li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  padding: 16px;
+  margin-bottom: 12px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  transition: all 0.2s ease;
+}
+
+.publication-list li:hover {
+  border-color: var(--blue);
+  box-shadow: var(--shadow);
+}
+
+.pub-type {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  background: #edf4ff;
+  color: var(--blue);
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  grid-column: 1;
+  height: fit-content;
+  white-space: nowrap;
+}
+
+.pub-title {
+  display: block;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.pub-authors {
+  display: block;
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.pub-journal {
+  display: block;
+  font-size: 13px;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.pub-doi {
+  display: inline-flex;
+  margin-left: 8px;
+}
+
+.pub-doi a {
+  color: var(--blue);
+  text-decoration: underline;
+  font-size: 12px;
+}
+
+/* Achievements Grid Styles */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.achievement-card {
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  transition: all 0.2s ease;
+}
+
+.achievement-card:hover {
+  box-shadow: var(--shadow);
+  border-color: var(--blue);
+}
+
+.achievement-card h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 16px;
+  color: var(--ink);
+  border-bottom: 2px solid var(--line);
+  padding-bottom: 8px;
+}
+
+.achievement-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.achievement-card li {
+  padding: 8px 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.achievement-card li:not(:last-child) {
+  border-bottom: 1px solid var(--line);
+}
+
+/* Member Styles */
+.member-roles {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+}
+
+/* Responsive adjustments */
+@media (max-width: 980px) {
+  .publication-list li {
+    grid-template-columns: 1fr;
+  }
+
+  .pub-type {
+    grid-column: auto;
+  }
+}
