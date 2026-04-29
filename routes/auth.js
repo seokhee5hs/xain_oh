@@ -6,7 +6,7 @@ const router = express.Router();
 // Hardcoded admin credentials (in production, use database)
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'admin@xainlab.ac.kr';
 const ADMIN_PASSWORD_HASH = bcrypt.hashSync(
-  process.env.ADMIN_PASSWORD || 'AdminPass123!',
+  process.env.ADMIN_PASSWORD || '1111',
   10
 );
 
