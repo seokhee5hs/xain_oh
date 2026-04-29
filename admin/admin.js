@@ -1,4 +1,21 @@
-const API_BASE = 'http://localhost:5000/api';
+// 환경에 따라 API 베이스 URL 동적 설정
+const getAPIBase = () => {
+  const hostname = window.location.hostname;
+  
+  // 로컬 환경
+  if (hostname === 'localhost' || hostname === '127.0.0.1') {
+    return 'http://localhost:5000/api';
+  }
+  
+  // 프로덕션 환경 (GitHub Pages 또는 배포된 서버)
+  // 현재 도메인의 API 서버로 요청 (같은 도메인)
+  const protocol = window.location.protocol;
+  const port = window.location.port ? `:${window.location.port}` : '';
+  return `${protocol}//${hostname}${port}/api`;
+};
+
+const API_BASE = getAPIBase();
+
 let authToken = localStorage.getItem('authToken');
 let currentEditId = null;
 let currentSection = 'publications';
